@@ -1,65 +1,73 @@
-import Image from "next/image";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Hero from "@/components/home/Hero";
+import FeatureGrid from "@/components/home/FeatureGrid";
+import ImpactSection from "@/components/home/ImpactSection";
+import ContentBlock from "@/components/home/ContentBlock";
+import NewsSection from "@/components/home/NewsSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen flex flex-col font-sans text-gray-800">
+      <Header />
+
+      <Hero />
+
+      {/* 2. Your Future/Features Grid */}
+      <FeatureGrid />
+
+      {/* 3. Our Impact */}
+      <ImpactSection />
+
+      {/* 4. Content Block: Why Teach/Why Join */}
+      <ContentBlock
+        title="Why Choose Bishop Scott?"
+        description="We believe in nurturing the whole child. Our curriculum extends beyond textbooks to include leadership, ethics, and community service. With mentorship from the finest educators, your daughter will be prepared not just for exams, but for life."
+        imageSrc="/images/classroom.png"
+        imageAlt="Teacher guiding students"
+        ctaText="Meet Our Staff"
+        ctaLink="/staff"
+      />
+
+      {/* 5. Alternating Content Block */}
+      <ContentBlock
+        title="Holistic Development"
+        description="From the sports field to the science lab, we provide opportunities for every student to discover their passion. Our 10-acre campus is equipped with world-class facilities to support academic, athletic, and artistic pursuits."
+        imageSrc="/images/sports.png"
+        imageAlt="Students playing sports"
+        ctaText="Explore Facilities"
+        ctaLink="/facilities"
+        isReversed={true}
+      />
+
+      {/* 6. Wings/Facilities Section (Simplified 'Our Schools' equivalent) */}
+      <section className="py-20 bg-brand-blue text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-serif font-bold text-3xl md:text-5xl mb-12">Our Academic Wings</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Wing 1 */}
+            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition cursor-pointer">
+              <h3 className="text-2xl font-bold font-serif text-brand-gold mb-4">Primary Wing</h3>
+              <p className="text-gray-200">Building a strong foundation with joy and curiosity. (Grades KG - 5)</p>
+            </div>
+            {/* Wing 2 */}
+            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition cursor-pointer border border-brand-gold">
+              <h3 className="text-2xl font-bold font-serif text-brand-gold mb-4">Middle Wing</h3>
+              <p className="text-gray-200">Exploration and skill development during distinct formative years. (Grades 6 - 8)</p>
+            </div>
+            {/* Wing 3 */}
+            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition cursor-pointer">
+              <h3 className="text-2xl font-bold font-serif text-brand-gold mb-4">Senior Wing</h3>
+              <p className="text-gray-200">Preparing for board exams and higher education with rigor. (Grades 9 - 12)</p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* 7. News */}
+      <NewsSection />
+
+      <Footer />
+    </main>
   );
 }
