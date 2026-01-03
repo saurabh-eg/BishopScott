@@ -5,7 +5,7 @@ import { PlayCircle, X } from "lucide-react";
 
 const VirtualTour = () => {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
-    const youtubeUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Replace with your actual YouTube video ID
+    const youtubeUrl = "https://www.youtube.com/embed/u9rgVzVwdK8"; // Replace with your actual YouTube video ID
 
     return (
         <>
