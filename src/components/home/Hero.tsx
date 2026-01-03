@@ -33,8 +33,16 @@ const slides = [
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    // Auto-play carousel
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
-        <section className="relative w-full h-[500px] md:h-[600px] flex flex-col justify-between">
+        <section className="relative w-full h-125 md:h-150 flex flex-col justify-between">
 
             {/* Background Slider Container - Restricted overflow strictly for images */}
             <div className="absolute inset-0 overflow-hidden bg-gray-900">

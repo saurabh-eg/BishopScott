@@ -7,7 +7,6 @@ import FeatureGrid from "@/components/home/FeatureGrid";
 import ImpactSection from "@/components/home/ImpactSection";
 import ContentBlock from "@/components/home/ContentBlock";
 import NewsSection from "@/components/home/NewsSection";
-import AcademicWings from "@/components/home/AcademicWings";
 import PrincipalMessage from "@/components/home/PrincipalMessage";
 import Testimonials from "@/components/home/Testimonials";
 import TrustBadges from "@/components/home/TrustBadges";
@@ -68,9 +67,6 @@ export default function Home() {
         ctaLink="/facilities"
         isReversed={true}
       />
-
-      {/* Academic Wings */}
-      <AcademicWings />
 
       {/* Trust Badges & Certifications */}
       <TrustBadges />

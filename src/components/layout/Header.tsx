@@ -25,7 +25,7 @@ const Header = () => {
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex items-center space-x-6">
                         <span className="flex items-center gap-2">
-                            <Phone size={14} /> +91 999 999 9999
+                            <Phone size={14} /> +91 8789811187
                         </span>
                         <span className="flex items-center gap-2">
                             <Mail size={14} /> info@bishopscottgirls.com

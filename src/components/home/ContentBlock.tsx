@@ -30,7 +30,7 @@ const ContentBlock = ({
                 <div className={clsx("flex flex-col gap-10 lg:gap-16 items-center", isReversed ? "lg:flex-row-reverse" : "lg:flex-row")}>
 
                     {/* Image Side */}
-                    <div className="w-full lg:w-5/12 relative h-[280px] md:h-[360px] lg:h-[400px] rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div className="w-full lg:w-5/12 relative h-70 md:h-90 lg:h-100 rounded-lg overflow-hidden shadow-sm border border-gray-200">
                         <Image
                             src={imageSrc}
                             alt={imageAlt}

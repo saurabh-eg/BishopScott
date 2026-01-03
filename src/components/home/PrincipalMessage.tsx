@@ -23,7 +23,7 @@ const PrincipalMessage = () => {
                     <div className="w-full lg:w-8/12">
                         <div className="flex flex-col gap-5">
                             <div className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-wider text-xs">
-                                <div className="w-6 h-[2px] bg-brand-red"></div>
+                                <div className="w-6 h-0.5 bg-brand-red"></div>
                                 Welcome Message
                             </div>
 

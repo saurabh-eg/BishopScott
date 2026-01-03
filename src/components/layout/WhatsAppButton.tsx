@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
     }, []);
 
     const handleWhatsAppClick = () => {
-        const phoneNumber = "919999999999"; // Replace with actual number
+        const phoneNumber = "918789811187";
         const message = encodeURIComponent("Hi, I'm interested in admission at Bishop Scott Girls School.");
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
     };
