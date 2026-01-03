@@ -123,7 +123,7 @@ const Hero = () => {
                 <div className="bg-white rounded-full py-2 px-3 md:py-6 md:px-16 flex flex-row items-center gap-2 md:gap-16 border border-gray-100 w-auto max-w-[98%] overflow-x-auto no-scrollbar">
 
                     {/* CTA 1: Enroll */}
-                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group flex-shrink-0">
+                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group shrink-0">
                         <div className="bg-brand-red text-white w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition">
                             <UserPlus size={16} className="md:w-6 md:h-6" />
                         </div>
@@ -137,7 +137,7 @@ const Hero = () => {
                     <div className="block w-px h-6 md:h-12 bg-gray-200"></div>
 
                     {/* CTA 2: Parent Portal */}
-                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group flex-shrink-0">
+                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group shrink-0">
                         <div className="bg-brand-gold text-white w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition">
                             <Users size={16} className="md:w-6 md:h-6" />
                         </div>
@@ -151,7 +151,7 @@ const Hero = () => {
                     <div className="block w-px h-6 md:h-12 bg-gray-200"></div>
 
                     {/* CTA 3: Alumni */}
-                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group flex-shrink-0">
+                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group shrink-0">
                         <div className="bg-[#0070BA] text-white w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition">
                             <GraduationCap size={16} className="md:w-6 md:h-6" />
                         </div>

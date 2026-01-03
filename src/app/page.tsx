@@ -5,6 +5,7 @@ import FeatureGrid from "@/components/home/FeatureGrid";
 import ImpactSection from "@/components/home/ImpactSection";
 import ContentBlock from "@/components/home/ContentBlock";
 import NewsSection from "@/components/home/NewsSection";
+import AcademicWings from "@/components/home/AcademicWings";
 
 export default function Home() {
   return (
@@ -40,29 +41,8 @@ export default function Home() {
         isReversed={true}
       />
 
-      {/* 6. Wings/Facilities Section (Simplified 'Our Schools' equivalent) */}
-      <section className="py-20 bg-brand-blue text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif font-bold text-3xl md:text-5xl mb-12">Our Academic Wings</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Wing 1 */}
-            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition cursor-pointer">
-              <h3 className="text-2xl font-bold font-serif text-brand-gold mb-4">Primary Wing</h3>
-              <p className="text-gray-200">Building a strong foundation with joy and curiosity. (Grades KG - 5)</p>
-            </div>
-            {/* Wing 2 */}
-            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition cursor-pointer border border-brand-gold">
-              <h3 className="text-2xl font-bold font-serif text-brand-gold mb-4">Middle Wing</h3>
-              <p className="text-gray-200">Exploration and skill development during distinct formative years. (Grades 6 - 8)</p>
-            </div>
-            {/* Wing 3 */}
-            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition cursor-pointer">
-              <h3 className="text-2xl font-bold font-serif text-brand-gold mb-4">Senior Wing</h3>
-              <p className="text-gray-200">Preparing for board exams and higher education with rigor. (Grades 9 - 12)</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 6. Wings/Facilities Section */}
+      <AcademicWings />
 
       {/* 7. News */}
       <NewsSection />
