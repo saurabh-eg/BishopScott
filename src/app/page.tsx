@@ -6,6 +6,8 @@ import ImpactSection from "@/components/home/ImpactSection";
 import ContentBlock from "@/components/home/ContentBlock";
 import NewsSection from "@/components/home/NewsSection";
 import AcademicWings from "@/components/home/AcademicWings";
+import PrincipalMessage from "@/components/home/PrincipalMessage";
+import Testimonials from "@/components/home/Testimonials";
 
 export default function Home() {
   return (
@@ -14,26 +16,41 @@ export default function Home() {
 
       <Hero />
 
-      {/* 2. Your Future/Features Grid */}
+      {/* 2. Features Grid */}
       <FeatureGrid />
 
       {/* 3. Our Impact */}
       <ImpactSection />
 
-      {/* 4. Content Block: Why Teach/Why Join */}
+      {/* 4. Principal's Message */}
+      <PrincipalMessage />
+
+      {/* 5. Content Block: Why Choose */}
       <ContentBlock
         title="Why Choose Bishop Scott?"
-        description="We believe in nurturing the whole child. Our curriculum extends beyond textbooks to include leadership, ethics, and community service. With mentorship from the finest educators, your daughter will be prepared not just for exams, but for life."
+        description="We believe in nurturing the whole child through a curriculum that extends beyond textbooks. Our educational philosophy focuses on leadership, ethics, and community service, ensuring that our students are prepared for the complexities of the 21st century."
+        features={[
+          "Global Standards of Education",
+          "Values-Driven Leadership",
+          "Safe and Nurturing Campus",
+          "Expert Faculty & Mentorship"
+        ]}
         imageSrc="/images/classroom.png"
         imageAlt="Teacher guiding students"
         ctaText="Meet Our Staff"
         ctaLink="/staff"
       />
 
-      {/* 5. Alternating Content Block */}
+      {/* 6. Content Block: Holistic Development */}
       <ContentBlock
         title="Holistic Development"
-        description="From the sports field to the science lab, we provide opportunities for every student to discover their passion. Our 10-acre campus is equipped with world-class facilities to support academic, athletic, and artistic pursuits."
+        description="From the sports field to the science lab, we provide limitless opportunities for every student to discover their passion. Our campus is equipped with world-class facilities to support academic excellence, athletic prowess, and artistic expression."
+        features={[
+          "Advanced Science Labs",
+          "Professional Sports Grounds",
+          "Vibrant Arts & Music Programs",
+          "Modern IT & STEM Facilities"
+        ]}
         imageSrc="/images/sports.png"
         imageAlt="Students playing sports"
         ctaText="Explore Facilities"
@@ -41,10 +58,13 @@ export default function Home() {
         isReversed={true}
       />
 
-      {/* 6. Wings/Facilities Section */}
+      {/* 7. Wings Section */}
       <AcademicWings />
 
-      {/* 7. News */}
+      {/* 8. Testimonials */}
+      <Testimonials />
+
+      {/* 9. News */}
       <NewsSection />
 
       <Footer />

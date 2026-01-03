@@ -63,7 +63,7 @@ const AcademicWings = () => {
                             Preparing students for board exams and higher education with academic rigor.
                         </p>
                         <span className="text-xs font-bold text-brand-red uppercase tracking-widest border border-brand-red/20 px-3 py-1 rounded-full">
-                            Grades 9 - 12
+                            Grades 9 - 10
                         </span>
                     </div>
                 </div>

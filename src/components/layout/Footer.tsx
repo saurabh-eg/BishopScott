@@ -8,12 +8,12 @@ const Footer = () => {
     return (
         <footer className="bg-brand-blue text-white pt-16 pb-8">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Column 1: About */}
                     <div>
                         <h3 className="font-serif text-xl font-bold mb-6 text-brand-gold">Bishop Scott Girls School</h3>
                         <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                            A premier institution dedicated to empowering young minds with knowledge, integrity, and leadership skills. Founded by Dr. Sandhya Yadav.
+                            A premier institution dedicated to empowering young minds with knowledge, integrity, and leadership skills. We provide a nurturing environment where every girl can achieve her full potential.
                         </p>
                         <div className="flex space-x-4">
                             <Link href="#" className="bg-white/10 p-2 rounded hover:bg-brand-gold hover:text-brand-blue transition">
@@ -40,17 +40,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Schools */}
-                    <div>
-                        <h4 className="font-bold mb-6 uppercase tracking-wider text-sm">Our Network</h4>
-                        <ul className="space-y-3 text-sm text-gray-300">
-                            <li><Link href="#" className="hover:text-brand-gold transition">Bishop Scott Boys School</Link></li>
-                            <li><Link href="#" className="hover:text-brand-gold transition">Bishop Scott Senior Secondary</Link></li>
-                            <li><Link href="#" className="hover:text-brand-gold transition">Bishop Scott Primary</Link></li>
-                        </ul>
-                    </div>
-
-                    {/* Column 4: Contact */}
+                    {/* Column 3: Contact */}
                     <div>
                         <h4 className="font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
                         <ul className="space-y-4 text-sm text-gray-300">
