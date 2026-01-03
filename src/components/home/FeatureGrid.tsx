@@ -44,35 +44,35 @@ const features = [
 
 const FeatureGrid = () => {
     return (
-        <section className="pt-32 pb-20 bg-gray-50">
+        <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div className="text-center mb-10">
                     <h2 className="text-brand-blue font-serif font-bold text-3xl md:text-5xl mb-4">Your Future Is Bright!</h2>
                     <p className="max-w-2xl mx-auto text-gray-600">
                         Explore the diverse facilities and opportunities that await you at Bishop Scott Girls School.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {features.map((feature, idx) => (
-                        <div key={idx} className="group relative h-64 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                        <div key={idx} className="group relative h-60 rounded-lg overflow-hidden shadow-sm cursor-pointer border border-gray-200">
                             {/* Background Image */}
                             <Image
                                 src={feature.image}
                                 alt={feature.title}
                                 fill
-                                className="object-cover transition duration-700 group-hover:scale-110"
+                                className="object-cover transition duration-300"
                             />
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-brand-blue/80 opacity-60 group-hover:opacity-90 transition duration-300"></div>
+                            <div className="absolute inset-0 bg-brand-blue/75 group-hover:bg-brand-blue/85 transition duration-300"></div>
 
                             {/* Content */}
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
-                                <div className="bg-white/20 p-4 rounded-full mb-4 backdrop-blur-sm group-hover:bg-brand-gold group-hover:text-brand-blue transition duration-300 transform group-hover:-translate-y-2">
+                                <div className="bg-white/20 p-3 rounded-full mb-3 backdrop-blur-sm group-hover:bg-brand-gold group-hover:text-brand-blue transition duration-300">
                                     <feature.icon size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold font-serif mb-2">{feature.title}</h3>
-                                <p className="text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
+                                <h3 className="text-lg font-bold font-serif mb-2">{feature.title}</h3>
+                                <p className="text-sm opacity-0 group-hover:opacity-100 transition duration-300">
                                     {feature.desc}
                                 </p>
                             </div>

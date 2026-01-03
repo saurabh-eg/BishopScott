@@ -4,12 +4,12 @@ import { Quote } from "lucide-react";
 
 const PrincipalMessage = () => {
     return (
-        <section className="py-20 bg-brand-grey overflow-hidden">
+        <section className="py-16 bg-brand-grey">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                     {/* Principal Photo */}
                     <div className="w-full lg:w-4/12 relative">
-                        <div className="relative w-full aspect-4/5 md:w-80 md:h-[400px] mx-auto rounded-2xl overflow-hidden shadow-2xl z-10 border-8 border-white">
+                        <div className="relative w-full aspect-4/5 md:w-80 md:h-96 mx-auto rounded-lg overflow-hidden shadow-sm border-4 border-white">
                             <Image
                                 src="/images/principal.png"
                                 alt="Principal Dr. Sandhya Yadav"
@@ -17,26 +17,24 @@ const PrincipalMessage = () => {
                                 className="object-cover"
                             />
                         </div>
-                        {/* Decorative background element */}
-                        <div className="absolute -bottom-6 -right-6 w-full h-full bg-brand-gold/10 rounded-2xl z-0 hidden md:block"></div>
                     </div>
 
                     {/* Message Content */}
                     <div className="w-full lg:w-8/12">
-                        <div className="flex flex-col gap-6">
-                            <div className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-sm">
-                                <div className="w-8 h-[2px] bg-brand-red"></div>
+                        <div className="flex flex-col gap-5">
+                            <div className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-wider text-xs">
+                                <div className="w-6 h-[2px] bg-brand-red"></div>
                                 Welcome Message
                             </div>
 
                             <div className="relative">
-                                <Quote className="absolute -top-6 -left-8 text-brand-gold/20 w-16 h-16 -z-1" />
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-brand-blue mb-8 leading-tight">
+                                <Quote className="absolute -top-4 -left-6 text-brand-gold/15 w-12 h-12" />
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-brand-blue mb-6 leading-tight">
                                     Message from the Principal
                                 </h2>
                             </div>
 
-                            <div className="space-y-6 text-gray-700 text-lg leading-relaxed font-sans italic">
+                            <div className="space-y-4 text-gray-700 text-base leading-relaxed font-sans italic">
                                 <p>
                                     "Education is not just about academic excellence; it is about character building, fostering empathy, and preparing young girls to lead with confidence in an ever-changing world."
                                 </p>
@@ -45,7 +43,7 @@ const PrincipalMessage = () => {
                                 </p>
                             </div>
 
-                            <div className="mt-8">
+                            <div className="mt-6">
                                 <div className="text-2xl font-serif font-bold text-brand-blue">Dr. Sandhya Yadav</div>
                                 <div className="text-brand-red font-semibold uppercase tracking-wider text-sm mt-1">Founding Principal & Director</div>
                                 <div className="mt-4 border-t border-gray-200 w-32 pt-2">

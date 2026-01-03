@@ -1,6 +1,8 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import Hero from "@/components/home/Hero";
+import QuickStats from "@/components/home/QuickStats";
 import FeatureGrid from "@/components/home/FeatureGrid";
 import ImpactSection from "@/components/home/ImpactSection";
 import ContentBlock from "@/components/home/ContentBlock";
@@ -8,6 +10,12 @@ import NewsSection from "@/components/home/NewsSection";
 import AcademicWings from "@/components/home/AcademicWings";
 import PrincipalMessage from "@/components/home/PrincipalMessage";
 import Testimonials from "@/components/home/Testimonials";
+import TrustBadges from "@/components/home/TrustBadges";
+import ImportantDates from "@/components/home/ImportantDates";
+import VirtualTour from "@/components/home/VirtualTour";
+import FeeStructure from "@/components/home/FeeStructure";
+import PhotoGallery from "@/components/home/PhotoGallery";
+import AdmissionBanner from "@/components/home/AdmissionBanner";
 
 export default function Home() {
   return (
@@ -16,16 +24,19 @@ export default function Home() {
 
       <Hero />
 
-      {/* 2. Features Grid */}
+      {/* Quick Statistics */}
+      <QuickStats />
+
+      {/* Features Grid */}
       <FeatureGrid />
 
-      {/* 3. Our Impact */}
+      {/* Our Impact */}
       <ImpactSection />
 
-      {/* 4. Principal's Message */}
+      {/* Principal's Message */}
       <PrincipalMessage />
 
-      {/* 5. Content Block: Why Choose */}
+      {/* Content Block: Why Choose */}
       <ContentBlock
         title="Why Choose Bishop Scott?"
         description="We believe in nurturing the whole child through a curriculum that extends beyond textbooks. Our educational philosophy focuses on leadership, ethics, and community service, ensuring that our students are prepared for the complexities of the 21st century."
@@ -41,7 +52,7 @@ export default function Home() {
         ctaLink="/staff"
       />
 
-      {/* 6. Content Block: Holistic Development */}
+      {/* Content Block: Holistic Development */}
       <ContentBlock
         title="Holistic Development"
         description="From the sports field to the science lab, we provide limitless opportunities for every student to discover their passion. Our campus is equipped with world-class facilities to support academic excellence, athletic prowess, and artistic expression."
@@ -58,16 +69,37 @@ export default function Home() {
         isReversed={true}
       />
 
-      {/* 7. Wings Section */}
+      {/* Academic Wings */}
       <AcademicWings />
 
-      {/* 8. Testimonials */}
+      {/* Trust Badges & Certifications */}
+      <TrustBadges />
+
+      {/* Virtual Campus Tour */}
+      <VirtualTour />
+
+      {/* Important Dates */}
+      <ImportantDates />
+
+      {/* Fee Structure */}
+      <FeeStructure />
+
+      {/* Testimonials */}
       <Testimonials />
 
-      {/* 9. News */}
+      {/* Photo Gallery */}
+      <PhotoGallery />
+
+      {/* News Section */}
       <NewsSection />
 
+      {/* Admission CTA Banner */}
+      <AdmissionBanner />
+
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <WhatsAppButton />
     </main>
   );
 }

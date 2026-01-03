@@ -33,17 +33,8 @@ const slides = [
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Auto-play carousel
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, []);
-
     return (
-        // REMOVED 'overflow-hidden' from this main section so the negative bottom absolute elements are visible
-        <section className="relative w-full h-[550px] md:h-[650px] flex flex-col justify-between group">
+        <section className="relative w-full h-[500px] md:h-[600px] flex flex-col justify-between">
 
             {/* Background Slider Container - Restricted overflow strictly for images */}
             <div className="absolute inset-0 overflow-hidden bg-gray-900">
@@ -62,19 +53,19 @@ const Hero = () => {
                             className="object-cover"
                             priority={index === 0}
                         />
-                        <div className="absolute inset-0 bg-black/50"></div>
+                        <div className="absolute inset-0 bg-black/40"></div>
                     </div>
                 ))}
             </div>
 
             {/* Hero Content (Text) */}
-            <div className="relative container mx-auto px-4 pt-32 md:pt-48 pb-20 flex flex-col items-center lg:items-start text-center lg:text-left z-20 h-full justify-center pointer-events-none">
+            <div className="relative container mx-auto px-4 pt-24 md:pt-32 pb-20 flex flex-col items-center lg:items-start text-center lg:text-left z-20 h-full justify-center pointer-events-none">
                 {slides.map((slide, index) => (
                     <div
                         key={slide.id}
                         className={clsx(
-                            "absolute top-1/2 left-4 md:left-auto transform -translate-y-1/2 transition-all duration-700 ease-out",
-                            index === currentSlide ? "opacity-100 translate-y-[-50%]" : "opacity-0 translate-y-[-40%] pointer-events-none"
+                            "absolute top-1/2 left-4 md:left-auto transform -translate-y-1/2 transition-opacity duration-500",
+                            index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
                         )}
                     >
                         <div className="pointer-events-auto max-w-4xl">
@@ -119,12 +110,12 @@ const Hero = () => {
             </div>
 
             {/* Floating CTA Pill Bar */}
-            <div className="absolute -bottom-8 md:-bottom-16 left-0 w-full z-40 flex justify-center px-4">
-                <div className="bg-white rounded-full py-2 px-3 md:py-6 md:px-16 flex flex-row items-center gap-2 md:gap-16 border border-gray-100 w-auto max-w-[98%] overflow-x-auto no-scrollbar">
+            <div className="absolute -bottom-6 md:-bottom-10 left-0 w-full z-40 flex justify-center px-4">
+                <div className="bg-white rounded-lg py-3 px-4 md:py-5 md:px-12 flex flex-row items-center gap-3 md:gap-12 shadow-sm border border-gray-200 w-auto max-w-[98%] overflow-x-auto no-scrollbar">
 
                     {/* CTA 1: Enroll */}
-                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group shrink-0">
-                        <div className="bg-brand-red text-white w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                    <div className="flex items-center gap-2 md:gap-3 cursor-pointer group shrink-0">
+                        <div className="bg-brand-red text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition">
                             <UserPlus size={16} className="md:w-6 md:h-6" />
                         </div>
                         <div className="flex flex-col text-left">
@@ -137,8 +128,8 @@ const Hero = () => {
                     <div className="block w-px h-6 md:h-12 bg-gray-200"></div>
 
                     {/* CTA 2: Parent Portal */}
-                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group shrink-0">
-                        <div className="bg-brand-gold text-white w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                    <div className="flex items-center gap-2 md:gap-3 cursor-pointer group shrink-0">
+                        <div className="bg-brand-gold text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition">
                             <Users size={16} className="md:w-6 md:h-6" />
                         </div>
                         <div className="flex flex-col text-left">
@@ -151,8 +142,8 @@ const Hero = () => {
                     <div className="block w-px h-6 md:h-12 bg-gray-200"></div>
 
                     {/* CTA 3: Alumni */}
-                    <div className="flex items-center gap-2 md:gap-4 cursor-pointer group shrink-0">
-                        <div className="bg-[#0070BA] text-white w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                    <div className="flex items-center gap-2 md:gap-3 cursor-pointer group shrink-0">
+                        <div className="bg-brand-blue-light text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition">
                             <GraduationCap size={16} className="md:w-6 md:h-6" />
                         </div>
                         <div className="flex flex-col text-left">
